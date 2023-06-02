@@ -17,6 +17,7 @@
 			height: 600px;
 			background-image: url("images/header.png");
 			background-size: 100%;
+			display: inline-block;
 		}
 		.header{
 			width: 100%;
@@ -30,6 +31,17 @@
 			margin-left: 30px;
 			
 		}
+		.menu{
+			list-style-type: none;
+		}
+		.menu li{
+			display: inline;
+			color: #FFFFFF;
+			font-size: 25px;
+		}
+		.right{
+			display: inline-block;
+		}
 
 
 	</style>
@@ -40,13 +52,28 @@
 <body>
 
 	<div class="header">
-		
+
+		<!-- Left Part Start-->
 		<div class="headerImg">
 			<img src="images/logo.png" class="logo">
 		</div>
 
+		<!-- Left Part End-->
 
-		
+
+		<!-- Right Part Start-->
+		<div class="right">
+			<ul class="menu">
+				<li>Home</li>
+				<li>Product</li>
+				<li>Promo</li>
+				<li>About</li>
+				<li>Contact</li>
+			</ul>
+		</div>
+
+		<!-- Right Part End-->
+
 
 	</div>
 
