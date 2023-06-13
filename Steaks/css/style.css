@@ -1,0 +1,18 @@
+.navBar{
+	background-color: #262626;
+}
+.menuBorder{
+	
+	border-width: 3px solid !important;
+	border-color: #e1b838 !important;
+}
+.headerImg{
+	background-image: url("images/headerImage.png") !important;
+
+}
+.primaryColorBack{
+	background-color: #e1b838;
+}
+.cardBack{
+	background-color: rgba(0, 0, 0, 0.3) !important;
+}
