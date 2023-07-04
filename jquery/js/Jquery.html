@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!-- saved from url=(0080)file:///Applications/WebProjects/Akhuwat/Web%20Development%20/jquery/jquery.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Jquery</title>
+</head>
+<body>
+
+	<p id="text" style="">Hello New text</p>
+	<button id="btn1">Change Text</button>
+
+	<script type="text/javascript" src="./Jquery_files/jquery.js"></script>
+	<script type="text/javascript">
+		
+		
+
+		$("#btn1").click(function (){
+			$("#text").fadeOut();
+			$("#text").text('Hello New text');
+			$("#text").fadeIn(3000)
+
+		});
+
+
+	</script>
+
+
+</body></html>
