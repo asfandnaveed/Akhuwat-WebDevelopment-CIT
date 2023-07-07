@@ -6,15 +6,34 @@ $dataBaseName='akhuwat';
 
 $con= new mysqli($serverAddress,$userName,$password,$dataBaseName);
 
-$sql="INSERT INTO `students` (`name`,`address`,`password`,`email`,`phone_no`,`gender`,`age`) VALUES
-('hamza','lahore','1267','hmz@gmail.com','03000000','male',34)";
+
+if( isset( $_POST['name'] ) ) {
 
 
-// if( $con->query($sql) ==TRUE ){
-// 	echo '<h1>Data Inserted</h1>';
-// }else{
-// 	echo 'something Went wrong';
-// }
+
+    $name = $_POST['name'];
+    $age = $_POST['age'];
+    $email = $_POST['email'];
+    $phone_no = $_POST['phNumber'];
+    $address = $_POST['Address'];
+    $gender = $_POST['gender'];
+    $password = $_POST['password'];
+
+
+
+    $sql="INSERT INTO `students` (`name`,`address`,`password`,`email`,`phone_no`,`gender`,`age`) VALUES
+    ('$name','$address','$password','$email','$phone_no','$gender','$age')";
+
+
+    if( $con->query($sql) ==TRUE ){
+     echo '<h1>Data Inserted</h1>';
+    }else{
+     echo 'something Went wrong';
+    }
+
+
+}
+
 
 
 
@@ -39,6 +58,12 @@ $sql="INSERT INTO `students` (`name`,`address`,`password`,`email`,`phone_no`,`ge
   </head>
   <body>
 
+
+    <input type="" name="">
+
+
+
+
     <div class="container-fluid px-1 py-5 mx-auto">
     <div class="row d-flex justify-content-center">
         <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
@@ -46,7 +71,7 @@ $sql="INSERT INTO `students` (`name`,`address`,`password`,`email`,`phone_no`,`ge
             <p class="blue-text">Just answer a few questions<br> so that we can personalize the right experience for you.</p>
             <div class="card">
                 <h5 class="text-center mb-4"></h5>
-                <form class="form-card">
+                <form class="form-card" method="POST" action="data.php">
                     <div class="row justify-content-between text-left">
                         <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Name<span class="text-danger"> *</span></label> <input type="text" id="fname" name="name" placeholder="Enter your name" onblur="validate(1)"> </div>
                         <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Age<span class="text-danger"> *</span></label> <input type="text" id="lname" name="age" placeholder="Enter your age" > </div>
